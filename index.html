@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solana Sequence</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Add Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Add Inter font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="guidePopup" class="popup">
+        <div class="popup-content">
+            <h2>Welcome to Solana Sequence!</h2>
+            <p>Can you solve the sequence puzzle?</p>
+            <ul>
+                <li>Solve each level to progress</li>
+                <li>Complete all levels to unlock a Solana wallet private key</li>
+            </ul>
+            <button onclick="closeGuide()">Start Playing</button>
+        </div>
+    </div>
+
+    <div id="resultPopup" class="popup" style="display: none;">
+        <div class="popup-content result-popup">
+            <h2 id="resultMessage"></h2>
+            <button onclick="closeResultPopup()">Continue</button>
+        </div>
+    </div>
+
+    <header>
+        <div style="
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-right: 20px;
+            height: 40px;
+        ">
+            <div style="
+                width: 15px;
+                height: 15px;
+                background-color: #14F195;
+                transform: rotate(45deg);
+                border-radius: 3px;
+                box-shadow: 0 0 15px rgba(20, 241, 149, 0.3);
+                animation: pulse 2s infinite;
+            "></div>
+            <div style="
+                width: 20px;
+                height: 20px;
+                background-color: #14F195;
+                transform: rotate(45deg);
+                border-radius: 3px;
+                box-shadow: 0 0 15px rgba(20, 241, 149, 0.3);
+                animation: pulse 2s infinite;
+                animation-delay: 0.2s;
+            "></div>
+            <div style="
+                width: 25px;
+                height: 25px;
+                background-color: #14F195;
+                transform: rotate(45deg);
+                border-radius: 3px;
+                box-shadow: 0 0 15px rgba(20, 241, 149, 0.3);
+                animation: pulse 2s infinite;
+                animation-delay: 0.4s;
+            "></div>
+        </div>
+        <h1>Solana Sequence</h1>
+        <div class="social-links">
+            <a href="https://x.com/Solana_Sequence" target="_blank" class="social-button">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://t.me/solanasequencer" target="_blank" class="social-button">
+                <i class="fab fa-telegram"></i>
+            </a>
+            <a href="https://pump.fun/board" target="_blank" class="buy-button">Buy Now</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="game">
+            <div class="level-display">Level: <span id="currentLevel">1</span></div>
+            <div class="sequence-container">
+                <div class="sequence-display">
+                    <span id="sequence">3, 6, 9, ?</span>
+                </div>
+                <input type="number" 
+                       id="userAnswer" 
+                       placeholder="Enter your answer here"
+                       min="0"
+                       autocomplete="off">
+                <button onclick="checkAnswer()">Submit Answer</button>
+            </div>
+            <div class="progress-bar">
+                <div id="progress"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Solana Sequence. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 
